@@ -1,0 +1,33 @@
+{
+  "name": "acta",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "description": "Acta is a group board. Members log what they actually did.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --disable-warning=ExperimentalWarning --import tsx src/server/index.ts",
+    "desktop": "electron .",
+    "score-engine": "node scripts/fetch-score-engine.mjs",
+    "test": "node --disable-warning=ExperimentalWarning --import tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.3.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
+  }
+}
